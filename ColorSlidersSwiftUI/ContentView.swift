@@ -48,7 +48,15 @@ struct ColorSliderView: View {
                 .tint(color)
             TextField("", value: $value, format: .number)
                 .frame(width: 40)
-            
+                .keyboardType(.numberPad)
+//            Button("Submit") {
+                //                self.enteredNumber = self.someNumber
+                //                self.someNumber = ""
+//                UIApplication.shared.endEditing()
+//            }
+            .onTapGesture {
+                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
+            }
         }
         .padding()
     }
@@ -65,4 +73,10 @@ extension ContentView {
         return false
     }
 }
+
+//extension UIApplication {
+//    func endEditing() {
+//        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+//    }
+//}
 
