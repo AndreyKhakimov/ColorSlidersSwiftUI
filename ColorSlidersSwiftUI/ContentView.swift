@@ -13,6 +13,8 @@ struct ContentView: View {
     @State private var greenColorValue: Double = 160
     @State private var blueColorValue: Double = 220
     
+    @ObservedObject var keyboardResponder = KeyboardResponder()
+    
     var body: some View {
         ZStack {
             Color.gray.opacity(0.2).ignoresSafeArea()
@@ -30,6 +32,7 @@ struct ContentView: View {
                 ColorSliderView(value: $blueColorValue, color: .blue)
                 Spacer()
             }
+            .offset(y: -keyboardResponder.currentHeight * 0.05)
         }
     }
 }

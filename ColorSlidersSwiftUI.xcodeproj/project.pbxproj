@@ -11,6 +11,7 @@
 		42C979B1279EB74400F08989 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C979B0279EB74400F08989 /* ContentView.swift */; };
 		42C979B3279EB74500F08989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C979B2279EB74500F08989 /* Assets.xcassets */; };
 		42C979B6279EB74500F08989 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C979B5279EB74500F08989 /* Preview Assets.xcassets */; };
+		42C979BD27A14CE100F08989 /* KeyBoardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C979BC27A14CE100F08989 /* KeyBoardResponder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		42C979B0279EB74400F08989 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		42C979B2279EB74500F08989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42C979B5279EB74500F08989 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		42C979BC27A14CE100F08989 /* KeyBoardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardResponder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				42C979AE279EB74400F08989 /* ColorSlidersSwiftUIApp.swift */,
 				42C979B0279EB74400F08989 /* ContentView.swift */,
+				42C979BC27A14CE100F08989 /* KeyBoardResponder.swift */,
 				42C979B2279EB74500F08989 /* Assets.xcassets */,
 				42C979B4279EB74500F08989 /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				42C979B1279EB74400F08989 /* ContentView.swift in Sources */,
 				42C979AF279EB74400F08989 /* ColorSlidersSwiftUIApp.swift in Sources */,
+				42C979BD27A14CE100F08989 /* KeyBoardResponder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
