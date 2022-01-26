@@ -14,19 +14,22 @@ struct ContentView: View {
     @State private var blueColorValue: Double = 220
     
     var body: some View {
-        VStack(spacing: 20) {
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 350, height: 150)
-                .padding()
-                .foregroundColor(
-                    Color(red: redColorValue / 255,
-                          green: greenColorValue / 255,
-                          blue: blueColorValue / 255)
-                )
-            ColorSliderView(value: $redColorValue, color: .red)
-            ColorSliderView(value: $greenColorValue, color: .green)
-            ColorSliderView(value: $blueColorValue, color: .blue)
-            Spacer()
+        ZStack {
+            Color.gray.opacity(0.2).ignoresSafeArea()
+            VStack(spacing: 10) {
+                RoundedRectangle(cornerRadius: 10)
+                    .frame(width: 350, height: 150)
+                    .padding()
+                    .foregroundColor(
+                        Color(red: redColorValue / 255,
+                              green: greenColorValue / 255,
+                              blue: blueColorValue / 255)
+                    )
+                ColorSliderView(value: $redColorValue, color: .red)
+                ColorSliderView(value: $greenColorValue, color: .green)
+                ColorSliderView(value: $blueColorValue, color: .blue)
+                Spacer()
+            }
         }
     }
 }
@@ -48,7 +51,8 @@ struct ColorSliderView: View {
             Slider(value: $value, in: 0...255, step: 1)
                 .tint(color)
             TextField("", value: $value, format: .number)
-                .frame(width: 40)
+                .frame(width: 50)
+                .textFieldStyle(.roundedBorder)
                 .keyboardType(.numberPad)
                 .onReceive(Just(self.value)) { inputValue in
                     if inputValue > 255 {
